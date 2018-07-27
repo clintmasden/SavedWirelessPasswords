@@ -1,0 +1,33 @@
+﻿<controls:MetroWindow x:Name="wMain" x:Class="SavedWirelessPasswords.Windows.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+                      Title="WIFI Credentials"
+                      Height="500"
+                      Width="620" WindowStartupLocation="CenterScreen" TitleCaps="False" ResizeMode="CanMinimize" Loaded="wMain_Loaded">
+    <Grid>
+
+        <Menu Height="30" VerticalAlignment="Top" FontSize="12">
+            <MenuItem Header="File">
+                <MenuItem x:Name="miRefresh" Header="Refresh" Click="miRefresh_Click" />
+            </MenuItem>
+            <MenuItem Header="Info">
+                <MenuItem x:Name="miInfo" Header="Information" Click="miInfo_Click" />
+            </MenuItem>
+        </Menu>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Margin="0,30,0,0">
+            <StackPanel x:Name="spProfiles" Background="#FFFFFCFC">
+            </StackPanel>
+        </ScrollViewer>
+
+        <Canvas x:Name="cnStatus" Margin="0,30,0,0" Background="#E560C0E8" Visibility="Hidden">
+
+            <controls:MetroProgressBar x:Name="mpProgress"
+                                                       Margin="0"
+                                                       Maximum="100"
+                                                       Minimum="0" IsIndeterminate="True" HorizontalAlignment="Center" VerticalAlignment="Center" Width="584" Foreground="White" Canvas.Left="10" Canvas.Top="147" />
+            <Label x:Name="lblStatus" Content="Printer Queue Status" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" FontSize="14" Foreground="White" Canvas.Left="10" Canvas.Top="118" Width="584" HorizontalContentAlignment="Center" />
+        </Canvas>
+    </Grid>
+</controls:MetroWindow>

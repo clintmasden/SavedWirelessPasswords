@@ -1,0 +1,17 @@
+﻿<UserControl x:Name="uWifi1" x:Class="SavedWirelessPasswords.UserControls.uWifi"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:SavedWirelessPasswords.UserControls"
+             mc:Ignorable="d" Height="60" Background="#7FF16161" Width="600" Margin="1" Opacity="0.8" MouseDown="uWifi_MouseDown" MouseEnter="uWifi_MouseEnter" MouseLeave="uWifi_MouseLeave">
+    <Canvas x:Name="cn_Main" Margin="3" Background="White">
+        <Image x:Name="imgWifi" Height="40" Canvas.Left="10" Canvas.Top="7" Width="40" Source="/SavedWirelessPasswords;component/Resources/wifi-offline.png" HorizontalAlignment="Left" VerticalAlignment="Center" MouseDown="imgWifi_MouseDown" MouseEnter="imgWifi_MouseEnter" MouseLeave="imgWifi_MouseLeave" Opacity="0.6" />
+        <Label x:Name="lblName" Content="Wifi Name" Canvas.Left="59" Background="{x:Null}" Canvas.Top="2" />
+        <Label x:Name="lblInformation" Content="Information" Canvas.Left="59" Canvas.Top="25" Background="{x:Null}" />
+
+        <Canvas x:Name="cn_Status" Background="White" Width="594" Height="54" Visibility="Hidden">
+            <Label HorizontalAlignment="Center" VerticalAlignment="Center" Content="Copied Password to Clipboard..." VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Height="54" Width="593" />
+        </Canvas>
+    </Canvas>
+</UserControl>
