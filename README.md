@@ -4,4 +4,4 @@ Uses NETSH & NativeWifi to display saved WIFI credentials.
 
 Article:
 
-COMING SOON
+https://clintmasden.com/saved-wireless-passwords/
